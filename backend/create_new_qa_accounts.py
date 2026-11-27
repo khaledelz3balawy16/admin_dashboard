@@ -4,30 +4,30 @@ from accounts.models import Profile
 # QA accounts to create
 qa_accounts = [
     {
-        "email": "contact@example.com",
+        "email": 'contact+c884457a3036@example.com',
         "username": "Rewan.yasser",
-        "password": "CHANGE_ME",
+        "password": 'CHANGE_ME',
         "first_name": "Rewan",
         "last_name": "Yasser"
     },
     {
-        "email": "contact@example.com",
+        "email": 'contact+cb09dcc78932@example.com',
         "username": "Ahmed.Lotfi",
-        "password": "CHANGE_ME",
+        "password": 'CHANGE_ME',
         "first_name": "Ahmed",
         "last_name": "Lotfi"
     },
     {
-        "email": "contact@example.com",
+        "email": 'contact+914f687db657@example.com',
         "username": "Khaled.Ashraf",
-        "password": "CHANGE_ME",
+        "password": 'CHANGE_ME',
         "first_name": "Khaled",
         "last_name": "Ashraf"
     },
     {
-        "email": "contact@example.com",
+        "email": 'contact+bb5c1e4e2710@example.com',
         "username": "office",
-        "password": "CHANGE_ME",
+        "password": 'CHANGE_ME',
         "first_name": "Office",
         "last_name": "Admin"
     }
@@ -36,35 +36,35 @@ qa_accounts = [
 # Additional QA accounts requested
 qa_accounts.extend([
     {
-        "email": "contact@example.com",
+        "email": 'contact+ab1c94e4c0be@example.com',
         "username": "Ayman.Badewi",
         "password": "ChangeMe123!",
         "first_name": "Ayman",
         "last_name": "Badewi",
     },
     {
-        "email": "contact@example.com",
+        "email": 'contact+76d4694352a8@example.com',
         "username": "Aya.Khater",
         "password": "ChangeMe123!",
         "first_name": "Aya",
         "last_name": "Khater",
     },
     {
-        "email": "contact@example.com",
+        "email": 'contact+9964316c75f6@example.com',
         "username": "Mohamed.Elmasry",
         "password": "ChangeMe123!",
         "first_name": "Mohamed",
         "last_name": "Elmasry",
     },
     {
-        "email": "contact@example.com",
+        "email": 'contact+5eebf7450bc0@example.com',
         "username": "Nada.Ibrahim",
         "password": "ChangeMe123!",
         "first_name": "Nada",
         "last_name": "Ibrahim",
     },
     {
-        "email": "contact@example.com",
+        "email": 'contact+39f3cccdbce7@example.com',
         "username": "Mwada.Fahmy",
         "password": "ChangeMe123!",
         "first_name": "Mwada",
@@ -140,5 +140,5 @@ print("\nTotal QA accounts:")
 qa_count = Profile.objects.filter(role='qa').count()
 print(f"  {qa_count} QA accounts in database")
 print("\nYou can now log in using either:")
-print("  - Email address (e.g., contact@example.com)")
+print('  - Email address (e.g., contact+c884457a3036@example.com)')
 print("  - Username (e.g., Rewan.yasser)")

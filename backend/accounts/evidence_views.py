@@ -548,12 +548,7 @@ def get_student_components(service, spreadsheet_id, student_email=None, student_
 
 
 class GetStudentComponentsView(APIView):
-    """
-    API endpoint to fetch student components from Google Sheets
-    GET /api/accounts/student-components/?student_email=contact@example.com
-    or
-    GET /api/accounts/student-components/?student_id=1234
-    """
+    '\n    API endpoint to fetch student components from Google Sheets\n    GET /api/accounts/student-components/?student_email=contact+fccbdaf41ebe@example.com\n    or\n    GET /api/accounts/student-components/?student_id=1234\n    '
     # Allow anonymous access when running in DEBUG for local testing (no token required).
     permission_classes = [AllowAny] if settings.DEBUG else [IsAuthenticated]
     

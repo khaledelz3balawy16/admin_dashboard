@@ -9,26 +9,26 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         # List of coach names with emails - each can log in with name or email
         coaches = [
-            {"name": "Omar Elshafey", "email": "contact@example.com"},
-            {"name": "Radwa Samir", "email": "contact@example.com"},
-            {"name": "Omar Badr", "email": "contact@example.com"},
-            {"name": "Ahmed Maher", "email": "contact@example.com"},
-            {"name": "Femi Falodun", "email": "contact@example.com"},
-            {"name": "Nathan Shields", "email": "contact@example.com"},
-            {"name": "Hannen Mostafa", "email": "contact@example.com"},
-            {"name": "Nouran Abdalla", "email": "contact@example.com"},
-            {"name": "Afaan Khan", "email": "contact@example.com"},
-            {"name": "Adeyemi Adeshina", "email": "contact@example.com"},
-            {"name": "Marwa Mahmoud", "email": "contact@example.com"},
-            {"name": "Mahinor Hesham", "email": "contact@example.com"},
-            {"name": "Omar Ham", "email": "contact@example.com"},
-            {"name": "Aryan Harikumar", "email": "contact@example.com"},
-            {"name": "Elaf Mansour", "email": "contact@example.com"},
-            {"name": "Olivia Evans", "email": "contact@example.com"},
-            {"name": "Patryk Zajac", "email": "contact@example.com"},
+            {"name": "Omar Elshafey", "email": 'contact+d9c4db65fc4f@example.com'},
+            {"name": "Radwa Samir", "email": 'contact+22b187d97ef2@example.com'},
+            {"name": "Omar Badr", "email": 'contact+8982bc9dfbfe@example.com'},
+            {"name": "Ahmed Maher", "email": 'contact+be9a41e30dc0@example.com'},
+            {"name": "Femi Falodun", "email": 'contact+167263910ecc@example.com'},
+            {"name": "Nathan Shields", "email": 'contact+459ef75604cd@example.com'},
+            {"name": "Hannen Mostafa", "email": 'contact+9359e11980b7@example.com'},
+            {"name": "Nouran Abdalla", "email": 'contact+0c695a926e1c@example.com'},
+            {"name": "Afaan Khan", "email": 'contact+37c9538dcddd@example.com'},
+            {"name": "Adeyemi Adeshina", "email": 'contact+72398d95e84c@example.com'},
+            {"name": "Marwa Mahmoud", "email": 'contact+7ab1e17fe08f@example.com'},
+            {"name": "Mahinor Hesham", "email": 'contact+5ef96d9a2817@example.com'},
+            {"name": "Omar Ham", "email": 'contact+9a587b4d99d6@example.com'},
+            {"name": "Aryan Harikumar", "email": 'contact+2537a231e45b@example.com'},
+            {"name": "Elaf Mansour", "email": 'contact+364fb9219f55@example.com'},
+            {"name": "Olivia Evans", "email": 'contact+3bc97a343f1a@example.com'},
+            {"name": "Patryk Zajac", "email": 'contact+8dc53252c136@example.com'},
         ]
 
-        password = "CHANGE_ME"
+        password = 'CHANGE_ME'
         created_count = 0
         updated_count = 0
 

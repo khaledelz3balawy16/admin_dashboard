@@ -8,7 +8,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         API_URL = "http://127.0.0.1:5055/api/coaches/all"
-        API_KEY = "CHANGE_ME"
+        API_KEY = 'CHANGE_ME'
         
         self.stdout.write("Fetching coach data from analytics API...")
         

@@ -2,8 +2,8 @@ from django.contrib.auth.models import User
 from accounts.models import Profile
 
 # Create QA account for Mahmoud Fouda
-email = "contact@example.com"
-password = "CHANGE_ME"
+email = 'contact+5bc84d97a3bd@example.com'
+password = 'CHANGE_ME'
 username = "mahmoud.fouda"
 
 # Check if user already exists

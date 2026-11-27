@@ -13,7 +13,7 @@ password. Disabled and ambiguous accounts are rejected. Current Inclusion
 caseloads continue to resolve by verified email.
 
 The dashboard also accepts signed LMS `learner` assertions for
-`contact@example.com` and `contact@example.com`, mapping them to dashboard
+`contact+7ad69e38164c@example.com` and `contact+46286c33683e@example.com`, mapping them to dashboard
 `qa` without changing their LMS role. Email matching is case-insensitive. All
 signature, expiry, browser-state, single-use and account-link checks still apply.
 The LMS must also allow these two accounts through its Inclusion authorization

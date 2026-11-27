@@ -18,8 +18,8 @@ from .views import _auth_payload_for_user
 
 SALT = "kbc-inclusion-sso-v1"
 QA_LEARNER_EMAIL_EXCEPTIONS = frozenset({
-    "contact@example.com",
-    "contact@example.com",
+    'contact+7ad69e38164c@example.com',
+    'contact+46286c33683e@example.com',
 })
 
 

@@ -57,7 +57,7 @@ class LMSLoginTests(TestCase):
 
     def test_named_learner_exceptions_sign_in_as_qa_and_preserve_accounts(self):
         for account_id, email in enumerate([
-            "contact@example.com", "contact@example.com",
+            'contact+7ad69e38164c@example.com', 'contact+46286c33683e@example.com',
         ], start=20):
             with self.subTest(email=email):
                 LMSLoginAttempt.objects.update_or_create(
@@ -82,13 +82,13 @@ class LMSLoginTests(TestCase):
             {"role": "admin"}, {"email": "emma.leavey@ofsted.gov.uk.attacker.test"},
         ]:
             with self.subTest(changes=changes):
-                claims = {"role": "learner", "email": "contact@example.com", **changes}
+                claims = {"role": "learner", "email": 'contact+7ad69e38164c@example.com', **changes}
                 self.assertEqual(self.complete(**claims).status_code, 401)
         self.assertEqual(User.objects.count(), 0)
 
     def test_disabled_learner_exception_is_denied(self):
-        User.objects.create_user(username="disabled_qa", email="contact@example.com", is_active=False)
-        self.assertEqual(self.complete(role="learner", email="contact@example.com").status_code, 403)
+        User.objects.create_user(username="disabled_qa", email='contact+46286c33683e@example.com', is_active=False)
+        self.assertEqual(self.complete(role="learner", email='contact+46286c33683e@example.com').status_code, 403)
 
     def test_denies_expired_signature(self):
         with patch("django.core.signing.time.time", return_value=1):
@@ -123,7 +123,7 @@ class LMSLoginTests(TestCase):
     def test_bad_destinations_do_not_create_attempts(self):
         for url in ["https://admin.kentbusinesscollege.net", "http://testserver",
                     "https://lms.example.test/login", "javascript:alert(1)",
-                    "https://user:password@lms.example.test", "https://lms.example.test?redirect=admin"]:
+                    'https://CHANGE_ME@lms.example.test', "https://lms.example.test?redirect=admin"]:
             with self.subTest(url=url), override_settings(LMS_BASE_URL=url):
                 count = LMSLoginAttempt.objects.count()
                 result = lms_sso.start(self.factory.post("/"))

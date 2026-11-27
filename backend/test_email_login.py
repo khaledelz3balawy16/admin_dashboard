@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 
 # Test 1: Login with email
-email = 'contact@example.com'
+email = 'contact+3bc97a343f1a@example.com'
 password = 'CHANGE_ME'
 
 print("=" * 60)

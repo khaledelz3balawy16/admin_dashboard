@@ -10,8 +10,8 @@ class EmailRequiredUserCreationFormTests(TestCase):
             data={
                 "username": "Youmna",
                 "email": "",
-                "password1": "CHANGE_ME",
-                "password2": "CHANGE_ME",
+                "password1": 'CHANGE_ME',
+                "password2": 'CHANGE_ME',
             }
         )
 
@@ -21,8 +21,8 @@ class EmailRequiredUserCreationFormTests(TestCase):
     def test_existing_user_can_keep_their_email(self):
         user = User.objects.create_user(
             username="existing-user",
-            email="contact@example.com",
-            password="CHANGE_ME",
+            email='contact+ebe8ead896ab@example.com',
+            password='CHANGE_ME',
         )
         form = EmailRequiredUserChangeForm(
             instance=user,
@@ -38,15 +38,15 @@ class EmailRequiredUserCreationFormTests(TestCase):
     def test_duplicate_email_is_rejected_case_insensitively(self):
         User.objects.create_user(
             username="existing-user",
-            email="contact@example.com",
-            password="CHANGE_ME",
+            email='contact+ebe8ead896ab@example.com',
+            password='CHANGE_ME',
         )
         form = EmailRequiredUserCreationForm(
             data={
                 "username": "another-user",
-                "email": "contact@example.com",
-                "password1": "CHANGE_ME",
-                "password2": "CHANGE_ME",
+                "email": 'contact+ebe8ead896ab@example.com',
+                "password1": 'CHANGE_ME',
+                "password2": 'CHANGE_ME',
             }
         )
 

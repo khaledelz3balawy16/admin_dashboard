@@ -626,7 +626,7 @@ export function ActionModal({
 
         // Open booking page only if booking failed completely (no confirmation AND no webhook)
         if (bookingAttempted && !reservationConfirmed) {
-          window.open("https://outlook.office.com/bookings/s/contact@example.com", "_blank");
+          window.open("https://outlook.office.com/bookings/s/contact+13674d765510@example.com", "_blank");
         }
 
         onConfirm("follow-up scheduled", { notesChanged: true });

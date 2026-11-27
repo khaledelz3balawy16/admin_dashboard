@@ -6,7 +6,7 @@ print("Testing QA Account Login")
 print("=" * 60)
 
 # Test 1: Login with email
-user = authenticate(username='contact@example.com', password='CHANGE_ME')
+user = authenticate(username='contact+5bc84d97a3bd@example.com', password='CHANGE_ME')
 print(f"\nTest 1 - Login with EMAIL: {'✓ SUCCESS' if user else '✗ FAILED'}")
 if user:
     print(f"  Username: {user.username}")
@@ -25,7 +25,7 @@ if user2:
 
 print("\n" + "=" * 60)
 print("✓ QA account is ready to use!")
-print("  Login with: contact@example.com")
-print("  Password: CHANGE_ME")
+print('  Login with: contact+5bc84d97a3bd@example.com')
+print('  Password: CHANGE_ME')
 print("  This account has full QA access to all coaches.")
 print("=" * 60)
